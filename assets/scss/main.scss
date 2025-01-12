@@ -1,0 +1,17 @@
+@use 'variables';
+@use 'hero';
+@use 'socials';
+@use 'menu';
+
+body {
+  font-family: variables.$font-main;
+  background-color: variables.$color-bg;
+  color: variables.$color-text;
+  line-height: 1.6;
+}
+
+button {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+}

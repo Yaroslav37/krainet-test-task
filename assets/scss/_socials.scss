@@ -1,0 +1,43 @@
+$divider-color: #000;
+$text-color: #000;
+$spacing: 15px;
+
+.socials {
+  position: absolute;
+  left: 50px;
+  top: 226px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: $spacing;
+  width: fit-content;
+
+  &__icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing;
+
+    a {
+      img {
+        display: block;
+        rotate: -90deg;
+      }
+    }
+  }
+
+  &__divider {
+    height: 70px;
+    width: 2px;
+    background-color: $divider-color;
+  }
+
+  &__text {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-size: 16px;
+    font-weight: bold;
+    color: text-color;
+  }
+}

@@ -1,0 +1,107 @@
+@use 'variables';
+@use 'mixins';
+
+.hero {
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 10;
+  }
+  &__container {
+    margin: 0 auto;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    max-width: 100vw;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 206px;
+    left: 400px;
+    right: 20px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1;
+  }
+
+  &__intro {
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 9px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-12px, -50%);
+      width: 36px;
+      height: 36px;
+      background-color: #ffa501;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 60px;
+    margin-bottom: 25px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu__button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 2;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.button {
+  @include mixins.flex-center;
+  background-color: #ffa501;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: variables.$color-text;
+  width: 135px;
+  height: 45px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  &--secondary {
+    background-color: transparent;
+    box-shadow: none;
+    width: 100px;
+  }
+}

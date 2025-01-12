@@ -1,13 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Krainet</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- шрифты todo: установить локально -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <header class="hero">
+    <div class="hero__container">
+      <img src="./assets/images/Background.jpg" alt="Фотография">
+      <div class="hero__overlay">
+        <div class="hero__intro">Меня зовут Александра Смит</div>
+        <div class="hero__title">Я веб-разработчик<br>из города Москва</div>
+        <div class="hero__buttons">
+          <a href="#portfolio" class="button">Портфолио</a>
+          <a href="#about" class="button button--secondary">Про меня</a>
+        </div>
+      </div>
+    </div>
+    <div class="socials">
+      <div class="socials__icons">
+        <a href="https://www.facebook.com/"><img src="./assets/images/icons/Facebook.svg" alt="Facebook"></img></a>
+        <a href="https://www.instagram.com/"><img src="./assets/images/icons/Instagram.svg" alt="Instagram"></img></a>
+        <a href="https://github.com/"><img src="./assets/images/icons/Github.svg" alt="Github"></img></a>
+      </div>
+      <div class="socials__divider"></div>
+      <div class="socials__text"><span>Социальные сети</span></div>
+    </div>
+    <button class="menu__button" aria-label="Открыть меню">
+      <img src="./assets/images/icons/Hamburger.svg" alt="Открыть">
+    </button>
+    <nav class="menu">
+      <button class="menu__close" aria-label="Закрыть меню">
+        <img src="./assets/images/icons/Close.svg" alt="Закрыть">
+      </button>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <img src="./assets/images/icons/Ellipse2.svg">
+          <a class="menu__link" href="#">ПРО МЕНЯ</a>
+        </li>
+        <li class="menu__item">
+          <img src="./assets/images/icons/Ellipse2.svg">
+          <a class="menu__link" href="#">МОЙ ОПЫТ</a>
+        </li>
+        <li class="menu__item">
+          <img src="./assets/images/icons/Ellipse2.svg">
+          <a class="menu__link" href="#">МОИ НАВЫКИ</a>
+        </li>
+        <li class="menu__item">
+          <img src="./assets/images/icons/Ellipse2.svg">
+          <a class="menu__link" href="#">МОИ РАБОТЫ</a>
+        </li>
+        <li class="menu__item">
+          <img src="./assets/images/icons/Ellipse2.svg">
+          <a class="menu__link" href="#">ПРАЙС-ЛИСТ</a>
+        </li>
+        <li class="menu__item">
+          <img src="./assets/images/icons/Ellipse2.svg">
+          <a class="menu__link" href="#">КОНТАКТЫ</a>
+        </li>
+      </ul>
+      <div class="menu__icons">
+        <a href="https://github.com/"><img src="./assets/images/icons/Github.svg" alt="Github"></img></a>
+        <a href="https://www.instagram.com/"><img src="./assets/images/icons/Instagram.svg" alt="Instagram"></img></a>
+        <a href="https://www.facebook.com/"><img src="./assets/images/icons/Facebook.svg" alt="Facebook"></img></a>
+      </div>
+    </nav>
+  </header>
+  <script src="./js/burgerMenu.js"></script>
 </body>
 </html>
