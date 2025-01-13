@@ -1,0 +1,155 @@
+@use 'variables';
+@use 'mixins';
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin: 0 auto;
+  height: auto;
+
+  &__image {
+    margin-left: 52px;
+    margin-right: 68px;
+  }
+
+  &__image img {
+    object-fit: cover;
+  }
+
+  &__info {
+    background-color: #fff;
+    align-items: start;
+  }
+
+  &__title {
+    position: relative;
+    margin: 6px 0;
+    font-weight: bold;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-12px, -50%);
+      width: 36px;
+      height: 36px;
+      background-color: #ffa501;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+  &__subtitle {
+    font-size: 36px;
+    line-height: 60px;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  &__divider {
+    height: 3px;
+    width: 60px;
+    background-color: #ffa501;
+  }
+
+  p {
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__icons {
+    display: inline-flex;
+    gap: 25px;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__input-group {
+    display: flex;
+    gap: 25px;
+  }
+
+  &__input {
+    display: inline-block;
+    border: 1px solid #000;
+    position: relative;
+    padding: 10px 20px;
+    width: 280px;
+
+    label {
+      position: absolute;
+      top: -12px;
+      left: 15px;
+      background: white;
+      padding: 0 5px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      font-size: 12px;
+      width: 100%;
+      padding: 0;
+      font-weight: 500;
+    }
+
+    input::placeholder {
+      color: black;
+    }
+  }
+
+  &__button {
+    @include mixins.flex-center;
+    background-color: #ffa501;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: variables.$color-text;
+    width: auto;
+    padding: 12px 26px;
+    margin-top: 28px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &__textarea {
+    display: inline-block;
+    border: 1px solid #000;
+    position: relative;
+    padding: 10px 20px;
+    width: 585px;
+    height: 166px;
+    font-size: 12px;
+    margin-top: 25px;
+
+    label {
+      position: absolute;
+      top: -12px;
+      left: 15px;
+      background: white;
+      padding: 0 5px;
+      font-size: inherit;
+      font-weight: 500;
+    }
+
+    textarea {
+      border: none;
+      outline: none;
+      font-size: inherit;
+      width: 100%;
+      height: 100%;
+      resize: none;
+      padding: 0;
+    }
+
+    textarea::placeholder {
+      color: black;
+    }
+  }
+}

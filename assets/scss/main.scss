@@ -2,6 +2,8 @@
 @use 'hero';
 @use 'socials';
 @use 'menu';
+@use 'experience';
+@use 'contacts';
 
 body {
   font-family: variables.$font-main;
@@ -14,4 +16,8 @@ button {
   all: unset;
   display: inline-block;
   cursor: pointer;
+}
+
+section {
+  padding: 0 390px;
 }
