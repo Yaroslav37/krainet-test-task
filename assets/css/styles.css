@@ -9,7 +9,6 @@
 }
 .hero__container {
   margin: 0 auto;
-  height: 100vh;
   max-width: 100%;
   overflow: hidden;
 }
@@ -182,14 +181,125 @@
 .experience {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  width: 986px;
+  margin-left: 65px;
+  margin-top: 120px;
+}
+.experience__divider {
+  height: 3px;
+  width: 60px;
+  background-color: #ffa501;
+}
+.experience h1 {
+  line-height: 60px;
+}
+.experience__header {
+  background-color: #ffa501;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
   justify-content: center;
+}
+.experience__container {
+  display: flex;
+  gap: 136px;
+  margin-top: 60px;
+}
+
+.info {
+  display: flex;
+  align-items: top;
+  flex-direction: row;
+}
+.info__block {
+  display: flex;
+  flex-direction: column;
+}
+.info__block h3 {
+  font-size: 20px;
+  margin: 0 0 0 35px;
+  line-height: 30px;
+}
+.info__item {
+  display: flex;
+  align-items: top;
+  flex-direction: column;
+  margin-top: 45px;
+}
+.info__item__description {
+  display: flex;
+  align-items: top;
+  flex-direction: column;
+  margin: 12px 0 0 35px;
+  width: 375px;
+  font-size: 12px;
+}
+.info__item__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.info__item__header__line {
+  width: 42px;
+  height: 1px;
+  background-color: #000;
+  margin-left: -7px;
+}
+.info__item__header__circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ffa501;
+  position: relative;
+}
+.info__item__header__circle img {
+  margin-bottom: -3px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.info__item__header__text {
+  margin-left: 20px;
+}
+.info__item__header__title {
+  font-size: 14px;
+  font-weight: bold;
+}
+.info__item__header__subtitle {
+  font-size: 12px;
+  font-weight: 500;
+}
+.info__timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15px;
+  padding-top: 9px;
+}
+.info__timeline__dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffa501;
+}
+.info__timeline__line {
+  width: 1px;
+  height: 352px;
+  background-color: #000;
 }
 
 .contacts {
   display: flex;
   flex-direction: row;
   align-items: start;
-  margin: 0 auto;
+  margin: 120px auto;
   height: auto;
 }
 .contacts__image {
