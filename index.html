@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Krainet</title>
+    <meta
+      name="description"
+      content="Веб-разработчик Александра Смит из Москвы. Опыт работы, навыки, контактная информация."
+    />
+    <title>Krainet - Портфолио</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <!-- шрифты todo: установить локально -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,28 +26,34 @@
       <div class="hero__container">
         <img src="./assets/images/Background.jpg" alt="Фотография" />
         <div class="hero__overlay">
-          <div class="hero__intro">Меня зовут Александра Смит</div>
-          <div class="hero__title">Я веб-разработчик<br />из города Москва</div>
+          <p class="hero__intro">Меня зовут Александра Смит</p>
+          <h1 class="hero__title">Я веб-разработчик<br />из города Москва</h1>
           <div class="hero__buttons">
             <a href="#portfolio" class="button">Портфолио</a>
             <a href="#about" class="button button--secondary">Про меня</a>
           </div>
         </div>
       </div>
-      <div class="socials">
-        <div class="socials__icons">
-          <a href="https://www.facebook.com/"
-            ><img src="./assets/images/icons/Facebook.svg" alt="Facebook"
-          /></a>
-          <a href="https://www.instagram.com/"
-            ><img src="./assets/images/icons/Instagram.svg" alt="Instagram"
-          /></a>
-          <a href="https://github.com/"
-            ><img src="./assets/images/icons/Github.svg" alt="Github"
-          /></a>
-        </div>
+      <div class="socials" aria-label="Социальные сети">
+        <ul class="socials__icons">
+          <li>
+            <a href="https://www.facebook.com/"
+              ><img src="./assets/images/icons/Facebook.svg" alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/"
+              ><img src="./assets/images/icons/Instagram.svg" alt="Instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/"
+              ><img src="./assets/images/icons/Github.svg" alt="Github"
+            /></a>
+          </li>
+        </ul>
         <div class="socials__divider"></div>
-        <div class="socials__text"><span>Социальные сети</span></div>
+        <p class="socials__text">Социальные сети</p>
       </div>
       <button class="menu__button" aria-label="Открыть меню">
         <img src="./assets/images/icons/Hamburger.svg" alt="Открыть" />
@@ -95,11 +104,11 @@
 
     <main class="content">
       <section class="experience">
-        <div class="experience__header">Опыт</div>
+        <header class="experience__header">Опыт</header>
         <h1>Чем я буду полезна</h1>
         <div class="experience__divider"></div>
         <div class="experience__container">
-          <div class="info">
+          <article class="info">
             <div class="info__timeline">
               <div class="info__timeline__dot"></div>
               <div class="info__timeline__line"></div>
@@ -149,9 +158,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="info">
+          <article class="info">
             <div class="info__timeline">
               <div class="info__timeline__dot"></div>
               <div class="info__timeline__line"></div>
@@ -201,7 +210,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </section>
       <section class="contacts">
@@ -233,16 +242,14 @@
                     <label for="name">Ваше имя</label>
                     <input type="text" id="name" />
                   </div>
-                  <div class="error-message">Пожалуйста, введите ваше имя</div>
+                  <div class="error-message"></div>
                 </div>
                 <div class="contacts__input-wrapper">
                   <div class="contacts__input">
                     <label for="email">Ваша почта</label>
                     <input type="text" id="email" />
                   </div>
-                  <div class="error-message">
-                    Пожалуйста, введите корректный email
-                  </div>
+                  <div class="error-message"></div>
                 </div>
               </div>
             </div>
@@ -251,9 +258,7 @@
                 <label for="message">Ваше сообщение</label>
                 <textarea id="message"></textarea>
               </div>
-              <div class="error-message">
-                Пожалуйста, введите ваше сообщение
-              </div>
+              <div class="error-message"></div>
             </div>
             <button class="contacts__button" type="submit">
               Отправить сообщение

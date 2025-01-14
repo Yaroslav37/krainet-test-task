@@ -34,25 +34,35 @@ function validateForm() {
   const message = form.querySelector('#message')
   let isValid = true
 
+  const nameError = name.parentElement.nextElementSibling
+  const emailError = email.parentElement.nextElementSibling
+  const messageError = message.parentElement.nextElementSibling
+
   if (name.value.trim() === '') {
     name.parentElement.classList.add('error')
+    nameError.textContent = 'Пожалуйста, введите ваше имя'
     isValid = false
   } else {
     name.parentElement.classList.remove('error')
+    nameError.textContent = ''
   }
 
   if (email.value.trim() === '' || !validateEmail(email.value.trim())) {
     email.parentElement.classList.add('error')
+    emailError.textContent = 'Пожалуйста, введите корректный email'
     isValid = false
   } else {
     email.parentElement.classList.remove('error')
+    emailError.textContent = ''
   }
 
   if (message.value.trim() === '') {
     message.parentElement.classList.add('error')
+    messageError.textContent = 'Пожалуйста, введите ваше сообщение'
     isValid = false
   } else {
     message.parentElement.classList.remove('error')
+    messageError.textContent = ''
   }
 
   return isValid
