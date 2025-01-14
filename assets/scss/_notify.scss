@@ -1,0 +1,48 @@
+$notify-shadow: rgba(0, 0, 0, 0.1);
+
+#notify-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: auto;
+  z-index: 100;
+}
+
+.notify {
+  //background: linear-gradient(135deg, #ddb03c, #e86721);
+  background: linear-gradient(135deg, #fce8b3, #ffa501);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px $notify-shadow;
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &__line {
+    width: 20px;
+    height: 1px;
+    background-color: white;
+  }
+
+  &__circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    // margin: 10px;
+  }
+
+  &__content {
+    padding: 15px;
+    flex-grow: 1;
+    color: white;
+  }
+}

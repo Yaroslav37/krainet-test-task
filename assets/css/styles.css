@@ -356,14 +356,24 @@
 }
 .contacts__input-group {
   display: flex;
-  gap: 25px;
+  justify-content: space-between;
+}
+.contacts__input-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 .contacts__input {
   display: inline-block;
   border: 1px solid #000;
   position: relative;
   padding: 10px 20px;
-  width: 280px;
+  width: 240px;
+}
+.contacts__input.error {
+  border-color: #ff0000;
+}
+.contacts__input.error label {
+  color: #711b1a;
 }
 .contacts__input label {
   position: absolute;
@@ -385,29 +395,34 @@
 .contacts__input input::placeholder {
   color: black;
 }
-.contacts__button {
+.contacts .error-message {
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+.contacts__input.error + .error-message {
+  display: block;
+}
+.contacts__textarea-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffa501;
-  font-size: 14px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #000000;
-  width: auto;
-  padding: 12px 26px;
-  margin-top: 28px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  flex-direction: column;
 }
 .contacts__textarea {
   display: inline-block;
   border: 1px solid #000;
   position: relative;
   padding: 10px 20px;
-  width: 585px;
-  height: 166px;
+  width: 545px;
+  height: 122px;
   font-size: 12px;
   margin-top: 25px;
+}
+.contacts__textarea.error {
+  border-color: #ff0000;
+}
+.contacts__textarea.error label {
+  color: #711b1a;
 }
 .contacts__textarea label {
   position: absolute;
@@ -429,6 +444,64 @@
 }
 .contacts__textarea textarea::placeholder {
   color: black;
+}
+.contacts__textarea.error + .error-message {
+  display: block;
+}
+.contacts__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffa501;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+  width: auto;
+  padding: 12px 26px;
+  margin-top: 28px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#notify-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: auto;
+  z-index: 100;
+}
+
+.notify {
+  background: linear-gradient(135deg, #fce8b3, #ffa501);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+}
+.notify.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.notify__line {
+  width: 20px;
+  height: 1px;
+  background-color: white;
+}
+.notify__circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+}
+.notify__content {
+  padding: 15px;
+  flex-grow: 1;
+  color: white;
 }
 
 body {

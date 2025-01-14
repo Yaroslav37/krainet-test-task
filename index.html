@@ -18,6 +18,7 @@
     />
   </head>
   <body>
+    <div id="notify-container"></div>
     <header class="hero">
       <div class="hero__container">
         <img src="./assets/images/Background.jpg" alt="Фотография" />
@@ -124,7 +125,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna
                   aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit, sed do eiusmo.
+                  elit, sed do eiusмо.
                 </div>
               </div>
               <div class="info__item">
@@ -224,22 +225,35 @@
             /></a>
           </div>
           <p>Или оставьте ваши данные и я сама вам напишу:</p>
-          <form>
+          <form id="contactForm">
             <div class="contacts__form-group">
               <div class="contacts__input-group">
-                <div class="contacts__input">
-                  <label for="name">Ваше имя</label>
-                  <input type="text" id="name" />
+                <div class="contacts__input-wrapper">
+                  <div class="contacts__input">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" />
+                  </div>
+                  <div class="error-message">Пожалуйста, введите ваше имя</div>
                 </div>
-                <div class="contacts__input">
-                  <label for="email">Ваша почта</label>
-                  <input type="text" id="email" />
+                <div class="contacts__input-wrapper">
+                  <div class="contacts__input">
+                    <label for="email">Ваша почта</label>
+                    <input type="text" id="email" />
+                  </div>
+                  <div class="error-message">
+                    Пожалуйста, введите корректный email
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="contacts__textarea">
-              <label for="message">Ваше сообщение</label>
-              <textarea id="message"></textarea>
+            <div class="contacts__textarea-wrapper">
+              <div class="contacts__textarea">
+                <label for="message">Ваше сообщение</label>
+                <textarea id="message"></textarea>
+              </div>
+              <div class="error-message">
+                Пожалуйста, введите ваше сообщение
+              </div>
             </div>
             <button class="contacts__button" type="submit">
               Отправить сообщение
@@ -249,5 +263,6 @@
       </section>
     </main>
     <script src="./js/burgerMenu.js"></script>
+    <script src="./js/contactsFormSubmit.js"></script>
   </body>
 </html>

@@ -4,6 +4,7 @@
 @use 'menu';
 @use 'experience';
 @use 'contacts';
+@use 'notify';
 
 body {
   font-family: variables.$font-main;

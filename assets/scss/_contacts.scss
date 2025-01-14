@@ -71,7 +71,12 @@
 
   &__input-group {
     display: flex;
-    gap: 25px;
+    justify-content: space-between;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 
   &__input {
@@ -79,7 +84,15 @@
     border: 1px solid #000;
     position: relative;
     padding: 10px 20px;
-    width: 280px;
+    width: 240px;
+
+    &.error {
+      border-color: #ff0000;
+
+      label {
+        color: #711b1a;
+      }
+    }
 
     label {
       position: absolute;
@@ -105,17 +118,20 @@
     }
   }
 
-  &__button {
-    @include mixins.flex-center;
-    background-color: #ffa501;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    color: variables.$color-text;
-    width: auto;
-    padding: 12px 26px;
-    margin-top: 28px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  .error-message {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+  }
+
+  &__input.error + .error-message {
+    display: block;
+  }
+
+  &__textarea-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 
   &__textarea {
@@ -123,10 +139,18 @@
     border: 1px solid #000;
     position: relative;
     padding: 10px 20px;
-    width: 585px;
-    height: 166px;
+    width: 545px;
+    height: 122px;
     font-size: 12px;
     margin-top: 25px;
+
+    &.error {
+      border-color: #ff0000;
+
+      label {
+        color: #711b1a;
+      }
+    }
 
     label {
       position: absolute;
@@ -151,5 +175,22 @@
     textarea::placeholder {
       color: black;
     }
+  }
+
+  &__textarea.error + .error-message {
+    display: block;
+  }
+
+  &__button {
+    @include mixins.flex-center;
+    background-color: #ffa501;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: variables.$color-text;
+    width: auto;
+    padding: 12px 26px;
+    margin-top: 28px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
