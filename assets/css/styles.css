@@ -96,8 +96,8 @@
   z-index: 2;
 }
 .hero .menu__button img {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 21px;
 }
 
 .button {
@@ -233,7 +233,7 @@
   flex-direction: column;
   width: 1140px;
   margin-top: 120px;
-  margin-left: 65px;
+  margin-left: 57px;
   margin-right: 115px;
 }
 @media (max-width: 1800px) {
