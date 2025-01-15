@@ -1,6 +1,7 @@
 $text-color: #ffffff;
 $font-size: 24px;
 $spacing: 15px;
+@use 'variables';
 
 .menu {
   position: absolute;
