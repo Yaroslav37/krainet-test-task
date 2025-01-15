@@ -254,14 +254,14 @@
                     <label for="name">Ваше имя</label>
                     <input type="text" id="name" />
                   </div>
-                  <div class="error-message"></div>
+                  <div class="error-message" data-error-for="name"></div>
                 </div>
                 <div class="contacts__input-wrapper">
                   <div class="contacts__input">
-                    <label for="email">Ваша почта</label>
+                    <label type="email" for="email">Ваша почта</label>
                     <input type="text" id="email" />
                   </div>
-                  <div class="error-message"></div>
+                  <div class="error-message" data-error-for="email"></div>
                 </div>
               </div>
             </div>
@@ -270,7 +270,7 @@
                 <label for="message">Ваше сообщение</label>
                 <textarea id="message"></textarea>
               </div>
-              <div class="error-message"></div>
+              <div class="error-message" data-error-for="message"></div>
             </div>
             <button class="contacts__button" type="submit">
               Отправить сообщение
@@ -279,7 +279,7 @@
         </div>
       </section>
     </main>
-    <script src="./js/burgerMenu.js"></script>
-    <script src="./js/contactsFormSubmit.js"></script>
+    <script src="./js/burgerMenu.js" defer></script>
+    <script src="./js/contactsFormSubmit.js" defer></script>
   </body>
 </html>

@@ -249,10 +249,12 @@
 .experience__divider {
   height: 3px;
   width: 60px;
+  margin-top: 25px;
   background-color: #ffa501;
 }
 .experience h2 {
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 0px;
 }
 @media (max-width: 815px) {
   .experience h2 {
@@ -676,9 +678,15 @@ body {
 }
 
 button {
-  all: unset;
   display: inline-block;
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: none;
 }
 
 main {
