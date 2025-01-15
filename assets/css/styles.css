@@ -1,10 +1,10 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @use 'mixins';
- *   | ^^^^^^^^^^^^^
- *   '
- *   assets/scss/hero.scss 2:1  @use
- *   assets/scss/main.scss 2:1  root stylesheet */
+/* Error: Undefined variable.
+ *    ,
+ * 74 |       background-color: variables.$primary-color;
+ *    |                         ^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   assets/scss/hero.scss 74:25  @use
+ *   assets/scss/main.scss 2:1    root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @use 'mixins';\a   \2502  ^^^^^^^^^^^^^\a   \2575 \a   assets/scss/hero.scss 2:1  @use\a   assets/scss/main.scss 2:1  root stylesheet";
+  content: "Error: Undefined variable.\a    \2577 \a 74 \2502        background-color: variables.$primary-color;\a    \2502                          ^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   assets/scss/hero.scss 74:25  @use\a   assets/scss/main.scss 2:1    root stylesheet";
 }
