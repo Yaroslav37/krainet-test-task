@@ -65,7 +65,7 @@
       transform: translate(-12px, -50%);
       width: 36px;
       height: 36px;
-      background-color: #ffa501;
+      background-color: variables.$primary-color;
       border-radius: 50%;
       z-index: -1;
     }
@@ -87,7 +87,7 @@
   &__divider {
     height: 3px;
     width: 60px;
-    background-color: #ffa501;
+    background-color: variables.$primary-color;
   }
 
   p {
@@ -232,8 +232,10 @@
   }
 
   &__button {
-    @include mixins.flex-center;
-    background-color: #ffa501;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$primary-color;
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
