@@ -18,7 +18,14 @@ button {
   display: inline-block;
   cursor: pointer;
 }
+main {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 section {
-  padding: 0 390px;
+  display: flex;
+  align-items: center;
 }

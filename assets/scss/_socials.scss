@@ -5,12 +5,16 @@ $spacing: 15px;
 .socials {
   position: absolute;
   left: 50px;
-  top: 226px;
+  top: 26%;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: $spacing;
   width: fit-content;
+
+  @media (max-width: 815px) {
+    display: none;
+  }
 
   &__icons {
     all: unset;
