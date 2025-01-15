@@ -40,20 +40,16 @@
   align-items: flex-start;
   z-index: 1;
 }
-
 @media (max-width: 1800px) {
   .hero__overlay {
     top: 20%;
     left: 20.3125%;
   }
 }
-
 @media (max-width: 815px) {
   .hero__overlay {
     top: 20%;
     left: 20.3125%;
-    left: 10px;
-    top: 206px;
   }
 }
 .hero__intro {
@@ -126,12 +122,17 @@
 .socials {
   position: absolute;
   left: 50px;
-  top: 26%;
+  top: 226px;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 15px;
   width: fit-content;
+}
+@media (max-width: 1800px) {
+  .socials {
+    top: 26%;
+  }
 }
 @media (max-width: 815px) {
   .socials {

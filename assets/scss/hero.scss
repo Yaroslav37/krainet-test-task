@@ -36,8 +36,8 @@
 
   &__overlay {
     position: absolute;
-    top: 20%;
-    left: 20.3125%;
+    top: 206px;
+    left: 390px;
     width: auto;
     height: auto;
     display: flex;
@@ -45,11 +45,14 @@
     align-items: flex-start;
     z-index: 1;
 
+    @media (max-width: 1800px) {
+      top: 20%;
+      left: 20.3125%;
+    }
+
     @media (max-width: 815px) {
       top: 20%;
       left: 20.3125%;
-      left: 10px;
-      top: 206px;
     }
   }
 
