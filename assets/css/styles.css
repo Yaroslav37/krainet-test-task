@@ -236,7 +236,12 @@
   margin-left: 65px;
   margin-right: 115px;
 }
-@media (max-width: 1160px) {
+@media (max-width: 1800px) {
+  .experience {
+    width: auto;
+  }
+}
+@media (max-width: 1180px) {
   .experience {
     width: auto;
   }
