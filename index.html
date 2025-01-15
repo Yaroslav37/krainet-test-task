@@ -21,96 +21,134 @@
     />
   </head>
   <body>
-    <div id="notify-container"></div>
-    <header class="hero">
+    <div id="notify-container" aria-live="polite"></div>
+    <div class="overlay"></div>
+    <header class="hero" role="banner">
       <div class="hero__container">
-        <img src="./assets/images/Background.jpg" alt="Photo" />
+        <img
+          src="./assets/images/Background.jpg"
+          alt="Фоновое изображение героя"
+        />
         <div class="hero__overlay">
           <p class="hero__intro">Меня зовут Александра Смит</p>
           <h1 class="hero__title">Я web-разработчик<br />из города Москва</h1>
           <div class="hero__buttons">
-            <a href="#portfolio" class="button">Портфолио</a>
-            <a href="#about" class="button button--secondary">Про меня</a>
+            <a href="#portfolio" class="button" role="button">Портфолио</a>
+            <a href="#about" class="button button--secondary" role="button"
+              >Про меня</a
+            >
           </div>
         </div>
       </div>
       <div class="socials">
-        <ul class="socials__icons">
+        <ul class="socials__icons" aria-label="Социальные сети">
           <li>
-            <a href="https://www.facebook.com/"
-              ><img src="./assets/images/icons/Facebook.svg" alt="Facebook"
-            /></a>
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+              <img src="./assets/images/icons/Facebook.svg" alt="" />
+            </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/"
-              ><img src="./assets/images/icons/Instagram.svg" alt="Instagram"
-            /></a>
+            <a href="https://www.instagram.com/" aria-label="Instagram">
+              <img src="./assets/images/icons/Instagram.svg" alt="" />
+            </a>
           </li>
           <li>
-            <a href="https://github.com/"
-              ><img src="./assets/images/icons/Github.svg" alt="Github"
-            /></a>
+            <a href="https://github.com/" aria-label="Github">
+              <img src="./assets/images/icons/Github.svg" alt="" />
+            </a>
           </li>
         </ul>
-        <div class="socials__divider"></div>
+        <div class="socials__divider" aria-hidden="true"></div>
         <p class="socials__text">Социальные сети</p>
       </div>
-      <button class="menu__button" aria-label="Открыть меню">
-        <img src="./assets/images/icons/Hamburger.svg" alt="Открыть" />
+      <button
+        class="menu__button"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+      >
+        <img src="./assets/images/icons/Hamburger.svg" alt="" />
       </button>
     </header>
 
-    <nav class="menu">
+    <nav class="menu" aria-label="Главное меню">
       <button class="menu__close" aria-label="Закрыть меню">
-        <img src="./assets/images/icons/Close.svg" alt="Закрыть" />
+        <img src="./assets/images/icons/Close.svg" alt="" />
       </button>
       <ul class="menu__list">
         <li class="menu__item">
-          <img src="./assets/images/icons/Ellipse2.svg" alt="point" />
-          <a class="menu__link" href="#">ПРО МЕНЯ</a>
+          <img
+            src="./assets/images/icons/Ellipse2.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <a class="menu__link" href="#about">ПРО МЕНЯ</a>
         </li>
         <li class="menu__item">
-          <img src="./assets/images/icons/Ellipse2.svg" alt="point" />
-          <a class="menu__link" href="#">МОЙ ОПЫТ</a>
+          <img
+            src="./assets/images/icons/Ellipse2.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <a class="menu__link" href="#experience">МОЙ ОПЫТ</a>
         </li>
         <li class="menu__item">
-          <img src="./assets/images/icons/Ellipse2.svg" alt="point" />
-          <a class="menu__link" href="#">МОИ НАВЫКИ</a>
+          <img
+            src="./assets/images/icons/Ellipse2.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <a class="menu__link" href="#skills">МОИ НАВЫКИ</a>
         </li>
         <li class="menu__item">
-          <img src="./assets/images/icons/Ellipse2.svg" alt="point" />
-          <a class="menu__link" href="#">МОИ РАБОТЫ</a>
+          <img
+            src="./assets/images/icons/Ellipse2.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <a class="menu__link" href="#portfolio">МОИ РАБОТЫ</a>
         </li>
         <li class="menu__item">
-          <img src="./assets/images/icons/Ellipse2.svg" alt="point" />
-          <a class="menu__link" href="#">ПРАЙС-ЛИСТ</a>
+          <img
+            src="./assets/images/icons/Ellipse2.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <a class="menu__link" href="#price">ПРАЙС-ЛИСТ</a>
         </li>
         <li class="menu__item">
-          <img src="./assets/images/icons/Ellipse2.svg" alt="point" />
-          <a class="menu__link" href="#">КОНТАКТЫ</a>
+          <img
+            src="./assets/images/icons/Ellipse2.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <a class="menu__link" href="#contacts">КОНТАКТЫ</a>
         </li>
       </ul>
       <div class="menu__icons">
-        <a href="https://github.com/"
-          ><img src="./assets/images/icons/Github.svg" alt="Github"
-        /></a>
-        <a href="https://www.instagram.com/"
-          ><img src="./assets/images/icons/Instagram.svg" alt="Instagram"
-        /></a>
-        <a href="https://www.facebook.com/"
-          ><img src="./assets/images/icons/Facebook.svg" alt="Facebook"
-        /></a>
+        <a href="https://github.com/" aria-label="Github">
+          <img src="./assets/images/icons/Github.svg" alt="" />
+        </a>
+        <a href="https://www.instagram.com/" aria-label="Instagram">
+          <img src="./assets/images/icons/Instagram.svg" alt="" />
+        </a>
+        <a href="https://www.facebook.com/" aria-label="Facebook">
+          <img src="./assets/images/icons/Facebook.svg" alt="" />
+        </a>
       </div>
     </nav>
 
-    <main class="content">
-      <section class="experience">
-        <header class="experience__header">Опыт</header>
+    <main class="content" role="main">
+      <section
+        class="experience"
+        id="experience"
+        aria-labelledby="experience-header"
+      >
+        <header class="experience__header" id="experience-header">Опыт</header>
         <h2>Чем я буду полезна</h2>
-        <div class="experience__divider"></div>
+        <div class="experience__divider" aria-hidden="true"></div>
         <div class="experience__container">
           <article class="info">
-            <div class="info__timeline">
+            <div class="info__timeline" aria-hidden="true">
               <div class="info__timeline__dot"></div>
               <div class="info__timeline__line"></div>
             </div>
@@ -118,12 +156,12 @@
               <h3>Образование</h3>
               <div class="info__item">
                 <div class="info__item__header">
-                  <div class="info__item__header__line"></div>
-                  <div class="info__item__header__circle">
-                    <img
-                      src="./assets/images/icons/University.svg"
-                      alt="University"
-                    />
+                  <div
+                    class="info__item__header__line"
+                    aria-hidden="true"
+                  ></div>
+                  <div class="info__item__header__circle" aria-hidden="true">
+                    <img src="./assets/images/icons/University.svg" alt="" />
                   </div>
                   <div class="info__item__header__text">
                     <div class="info__item__header__title">
@@ -231,47 +269,59 @@
           <img src="./assets/images/Photo.jpg" alt="Background" />
         </div>
         <div class="contacts__form">
-          <h4 class="contacts__title">Контакты</h4>
+          <h4 class="contacts__title" id="contacts-title">Контакты</h4>
           <h2 class="contacts__subtitle">Свяжитесь со мной</h2>
-          <div class="contacts__divider"></div>
+          <div class="contacts__divider" aria-hidden="true"></div>
           <p>Любым удобным для вас способом</p>
           <div class="contacts__icons">
-            <a href="https://www.facebook.com/"
-              ><img src="./assets/images/icons/Facebook.svg" alt="Facebook"
-            /></a>
-            <a href="https://telegram.org/"
-              ><img src="./assets/images/icons/Telegram.svg" alt="Telegram"
-            /></a>
-            <a href="https://www.instagram.com/"
-              ><img src="./assets/images/icons/Instagram.svg" alt="Instagram"
-            /></a>
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+              <img src="./assets/images/icons/Facebook.svg" alt="" />
+            </a>
+            <a href="https://telegram.org/" aria-label="Telegram">
+              <img src="./assets/images/icons/Telegram.svg" alt="" />
+            </a>
+            <a href="https://www.instagram.com/" aria-label="Instagram">
+              <img src="./assets/images/icons/Instagram.svg" alt="" />
+            </a>
           </div>
           <p>Или оставьте ваши данные и я сама вам напишу:</p>
-          <form id="contactForm">
+          <form id="contactForm" aria-label="Форма обратной связи">
             <div class="contacts__form-group">
               <div class="contacts__input-group">
                 <div class="contacts__input-wrapper">
                   <div class="contacts__input">
                     <label for="name">Ваше имя</label>
-                    <input type="text" id="name" />
+                    <input type="text" id="name" aria-required="true" />
                   </div>
-                  <div class="error-message" data-error-for="name"></div>
+                  <div
+                    class="error-message"
+                    data-error-for="name"
+                    aria-live="polite"
+                  ></div>
                 </div>
                 <div class="contacts__input-wrapper">
                   <div class="contacts__input">
-                    <label type="email" for="email">Ваша почта</label>
-                    <input type="text" id="email" />
+                    <label for="email">Ваша почта</label>
+                    <input type="email" id="email" aria-required="true" />
                   </div>
-                  <div class="error-message" data-error-for="email"></div>
+                  <div
+                    class="error-message"
+                    data-error-for="email"
+                    aria-live="polite"
+                  ></div>
                 </div>
               </div>
             </div>
             <div class="contacts__textarea-wrapper">
               <div class="contacts__textarea">
                 <label for="message">Ваше сообщение</label>
-                <textarea id="message"></textarea>
+                <textarea id="message" aria-required="true"></textarea>
               </div>
-              <div class="error-message" data-error-for="message"></div>
+              <div
+                class="error-message"
+                data-error-for="message"
+                aria-live="polite"
+              ></div>
             </div>
             <button class="contacts__button" type="submit">
               Отправить сообщение

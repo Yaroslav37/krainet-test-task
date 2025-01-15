@@ -5,13 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const heroContainer = document.querySelector('.hero__container')
   const menuItems = document.querySelectorAll('.menu__link')
   const menuIcons = document.querySelectorAll('.menu__icons a')
+  const overlay = document.querySelector('.overlay')
 
   function openMenu() {
     menu.classList.add('active')
-
-    const background = document.createElement('div')
-    background.classList.add('hero__background')
-    heroContainer.appendChild(background)
+    overlay.classList.add('active')
 
     menuItems.forEach((item) => {
       item.setAttribute('tabindex', '0')
@@ -24,11 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function closeMenu() {
     menu.classList.remove('active')
-
-    const background = document.querySelector('.hero__background')
-    if (background) {
-      heroContainer.removeChild(background)
-    }
+    overlay.classList.remove('active')
 
     menuItems.forEach((item) => {
       item.setAttribute('tabindex', '-1')
@@ -53,4 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
     icon.setAttribute('tabindex', '-1')
   })
   menuCloseButton.setAttribute('tabindex', '-1')
+
+  overlay.addEventListener('click', closeMenu)
 })

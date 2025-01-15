@@ -5,6 +5,7 @@
 @use 'experience';
 @use 'contacts';
 @use 'notify';
+@use 'overlay';
 
 body {
   font-family: variables.$font-main;
